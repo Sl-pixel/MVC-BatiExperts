@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../lib/database.php';
 
-class commandesTask
+class Order
 {
     private int $id;
     private string $status;
