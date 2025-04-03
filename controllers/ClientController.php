@@ -21,7 +21,7 @@ class ClientController
     public function show(int $id) 
     {
         $client = $this->clientRepository->getClient($id);
-
+        // $orders = $this->orderRepository->getOrdersByClientId($id);
         require_once __DIR__ . '/../views/viewClient.php';
     }
 
