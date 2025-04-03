@@ -3,7 +3,7 @@
 <h2 class="mb-4">📋 Détail de la Commande</h2>
 
 <p><strong>ID : </strong> <?= $order->getId() ?></p>
-<p><strong>Titre : </strong> <?= $order->getTitre() ?></p>
+<p><strong>Titre : </strong> <?= $order->getTitle() ?></p>
 <p><strong>Statut : </strong> <?= $order->getStatus() ?></p>
 <p><strong>Créée le : </strong> <?= $order->getCreatedAt() ?></p>
 <p><strong>Modifiée le : </strong> <?= $order->getUpdatedAt() ?></p>

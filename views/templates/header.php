@@ -8,14 +8,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="?">📋 Gestion des Clients</a>
+                    <a class="navbar-brand" href="?">📋 Gestion des clients et des commandes</a>
             <div class="" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="?">🏠 Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?action=create">⊕ Nouveaux clients</a>
+                        <a class="nav-link" href="?action=create">⊕ Nouveaux clients ou commandes</a>
                     </li>
                 </ul>
             </div>

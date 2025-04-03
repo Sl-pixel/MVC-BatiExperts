@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../clients.php';
-require_once __DIR__ . '/../order.php';
+require_once __DIR__ . '/../orders.php';
 require_once __DIR__ . '/../../lib/database.php';
 
 class OrderRepository
@@ -50,7 +50,7 @@ class OrderRepository
         return $order;
     }
 
-    public function create(Order $order): bool
+    public function createOrder(Order $order): bool
     {
         $statement = $this->connection
                 ->getConnection()
@@ -62,7 +62,7 @@ class OrderRepository
         ]);
     }
 
-    public function update(Order $order): bool
+    public function updateOrder(Order $order): bool
     {
         $statement = $this->connection
                 ->getConnection()
@@ -75,7 +75,7 @@ class OrderRepository
         ]);
     }
 
-    public function delete(int $id): bool
+    public function deleteOrder(int $id): bool
     {
         $statement = $this->connection
                 ->getConnection()

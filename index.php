@@ -33,3 +33,37 @@ switch ($action) {
         $clientController->forbidden();
         break;
 }
+
+require_once __DIR__ . '/controllers/OrderController.php';
+
+$orderController = new OrderController();
+
+$action = $_GET['action'] ?? 'index';
+$id = $_GET['id'] ?? null;
+
+switch ($action) {
+    case 'view':
+        $orderController->showOrder($id);
+        break;
+    case 'create':
+        $orderController->createOrder();
+        break;
+    case 'index':
+        $orderController->orderHome();
+        break;
+    case 'store':
+        $orderController->storeOrder();
+        break;
+    case 'edit':
+        $orderController->editOrder($id);
+        break;
+    case 'update':
+        $orderController->updateOrder();
+        break;
+    case 'delete':
+        $orderController->deleteOrder($id);
+        break;
+    default:
+        $orderController->forbidden();
+        break;
+}

@@ -35,31 +35,31 @@ class OrderController
         $order = new Order();
         $order->setTitle($_POST['title']);
         $order->setStatus($_POST['status']);
-        $this->orderRepository->create($order);
+        $this->orderRepository->createOrder($order);
 
         header('Location: ?');
     }
 
-    public function edit(int $id)
+    public function editOrder(int $id)
     {
         $order = $this->orderRepository->getOrder($id);
         require_once __DIR__ . '/../views/editOrder.php';
     }
 
-    public function update()
+    public function updateOrder()
     {
         $order = new Order();
         $order->setId($_POST['id']);
         $order->setTitle($_POST['title']);
         $order->setStatus($_POST['status']);
-        $this->orderRepository->update($order);
+        $this->orderRepository->updateOrder($order);
 
         header('Location: ?');
     }
 
-    public function delete(int $id)
+    public function deleteOrder(int $id)
     {
-        $this->orderRepository->delete($id);
+        $this->orderRepository->deleteOrder($id);
 
         header('Location: ?');
     }
