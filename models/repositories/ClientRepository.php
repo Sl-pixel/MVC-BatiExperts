@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../clients.php';
-require_once __DIR__ . '/../order.php';
+// require_once __DIR__ . '/../order.php';
 require_once __DIR__ . '/../../lib/database.php';
 
 class ClientRepository
