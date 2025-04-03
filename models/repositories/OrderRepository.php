@@ -55,9 +55,9 @@ class OrderRepository
     }
 
     public function getOrdersByClientId(int $clientId) {
-        $statement = $this->connection->getConnection()->prepare("SELECT * FROM Orders WHERE client_id=:client_id");
+        $statement = $this->connection->getConnection()->prepare("SELECT * FROM orders WHERE client_id=:client_id");
         $statement->execute(['client_id' => $clientId]);
-        $result = $statement->fetch();
+        $result = $statement->fetchAll();
         $orders = [];
         foreach ($result as $row) {
             $order = new Order();
