@@ -2,13 +2,17 @@
 
 require_once __DIR__ . '/../models/repositories/ClientRepository.php';
 require_once __DIR__ . '/../models/clients.php';
+require_once __DIR__ . '/../models/orders.php';
+require_once __DIR__ . '/../models/repositories/OrderRepository.php';
 class ClientController
 {
     private ClientRepository $clientRepository;
+    private OrderRepository $orderRepository;
 
     public function __construct()
     {
         $this->clientRepository = new ClientRepository();
+        $this->orderRepository = new OrderRepository();
     }
 
     public function home()
@@ -21,10 +25,12 @@ class ClientController
     public function show(int $id) 
     {
         $client = $this->clientRepository->getClient($id);
-        // $orders = $this->orderRepository->getOrdersByClientId($id);
+        $orders = $this->orderRepository->getOrdersByClientId($id);
         require_once __DIR__ . '/../views/viewClient.php';
+        require_once __DIR__ . '/../views/viewOrder.php';
     }
 
+    
     public function create()
     {
         require_once __DIR__ . '/../views/createClient.php';

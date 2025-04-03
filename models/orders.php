@@ -9,10 +9,15 @@ class Order
     private string $status;
     private DateTime $createdAt;
     private DateTime $updatedAt;
+    private int $client_id;
 
     public function getId(): int
     {
         return $this->id;
+    }
+    public function getClientId(): int
+    {
+        return $this->client_id;
     }
     public function getTitle(): string
     {
@@ -36,6 +41,10 @@ class Order
     public function setId(int $id): void
     {
         $this->id = $id;
+    }
+    public function setClientId(int $client_id): void
+    {
+        $this->client_id = $client_id;
     }
 
     public function setTitle(string $title): void

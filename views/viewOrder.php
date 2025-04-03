@@ -7,6 +7,7 @@
 <p><strong>Statut : </strong> <?= $order->getStatus() ?></p>
 <p><strong>Créée le : </strong> <?= $order->getCreatedAt() ?></p>
 <p><strong>Modifiée le : </strong> <?= $order->getUpdatedAt() ?></p>
+<p><strong>ID client : </strong> <?= $order->getClientId() ?></p>
 
 <a href="?action=edit&id=<?= $order->getId() ?>" class="btn btn-warning">Modifier la Commande</a>
 <a href="?" class="btn btn-secondary">Retour à la liste</a>
