@@ -38,6 +38,7 @@ class OrderController
         $this->orderRepository->createOrder($order);
 
         header('Location: ?');
+        exit;
     }
 
     public function editOrder(int $id)
@@ -55,6 +56,7 @@ class OrderController
         $this->orderRepository->updateOrder($order);
 
         header('Location: ?');
+        exit;
     }
 
     public function deleteOrder(int $id)
@@ -62,6 +64,7 @@ class OrderController
         $this->orderRepository->deleteOrder($id);
 
         header('Location: ?');
+        exit;
     }
 
     public function forbidden()

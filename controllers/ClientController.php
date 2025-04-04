@@ -45,6 +45,7 @@ class ClientController
         $this->clientRepository->create($client);
 
         header('Location: ?');
+        exit;
     }
 
     public function edit(int $id)
@@ -63,6 +64,7 @@ class ClientController
         $this->clientRepository->update($client);
 
         header('Location: ?');
+        exit;
     }
 
     public function delete(int $id)
@@ -70,6 +72,7 @@ class ClientController
         $this->clientRepository->delete($id);
 
         header('Location: ?');
+        exit;
     }
 
     public function forbidden()
